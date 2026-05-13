@@ -106,7 +106,7 @@ end
 
 ## Length of Table Array
 
-You can use the <code>#</code> operator to get the length of a table array. For tables with non-numeric indexes, you have to use <code>pairs</code> and calculate the length yourself, though the "length" of that kind of table isnt really useful. This follows the same rules as <code>ipairs</code> in the way that the table's length is every numeric index until one returns <code>nil</code>. So <code>#\{1,2,3,4}</code> will return <code>4</code>, and <code>#\{1,2,nil,4}</code> will return <code>2</code>.<br/>
+You can use the <code>#</code> operator to get the length of a table array. For tables with non-numeric indexes, you have to use <code>pairs</code> and calculate the length yourself, though the "length" of that kind of table isn't really useful. This follows the same rules as <code>ipairs</code> in the way that the table's length is every numeric index until one returns <code>nil</code>. So <code>#\{1,2,3,4}</code> will return <code>4</code>, and <code>#\{1,2,nil,4}</code> will return <code>2</code>.<br/>
 As an example, <code>ipairs</code> is pretty much just this.
 
 ```lua
@@ -123,7 +123,7 @@ All of these functions are available via the <code>tables</code> global.
 ### <code>table.insert(t, pos, value)</code>
 
 This function can add a value at any index, shifting the other values to account for the added value.<br/>
-<code>table.insert(array, 1, "e")</code> will insert <code>"e"</code> at the beggining of the table <code>array</code>, shifting every other value forward one index.<br/>
+<code>table.insert(array, 1, "e")</code> will insert <code>"e"</code> at the beginning of the table <code>array</code>, shifting every other value forward one index.<br>
 When adding elements to the end of the array, you use the function as <code>table.insert(t, value)</code>. So <code>table.insert(array, "l")</code> appends <code>"l"</code> to the end of the table <code>array</code>.
 
 ### <code>table.remove(t, pos)</code>

@@ -33,7 +33,7 @@ Here is an example of a function that calculates the sum of two numbers.
 
 <!-- prettier-ignore -->
 ```lua
-function sum(a, b) -- parameters seperated by commas
+function sum(a, b) -- parameters separated by commas
     local s = a + b -- calculate the sum
     return s -- return the sum to be used by the caller
 end

@@ -35,7 +35,7 @@ To use the plugin open Blockbench and go to <code>File</code> in the upper left,
 
 Once the plugin is installed, open the Blockbench project and go back to <code>File</code> and then <code>Convert Project</code>. Choose the <code>Figura Model</code> format and press confirm.
 
-After that's complete you can right click on a group/cube/mesh and copy the path to your clibboard. Note that this path will not include any subfolders the Blockbench model is in.
+After that's complete you can right click on a group/cube/mesh and copy the path to your clipboard. Note that this path will not include any subfolders the Blockbench model is in.
 
 # Storing a ModelPart
 
