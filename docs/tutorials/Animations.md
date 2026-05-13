@@ -22,32 +22,9 @@ animations.example.idle:play()
 
 <code>animations</code> stores all the animation data for every Blockbench model.<br/>
 
-The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is <code>example.bbmodel</code> (if your Blockbench model is in a subfolder, that will need to be included as well like <code>animations["subfolder.example"].idle</code>)
+The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is <code>example.bbmodel</code>. Note that the <code>.bbmodel</code> file extension is *not* included. If your model is within one or multiple subfolders, those are also included in this section, e.g.: <code>animations["subfolder.example"].idle</code>.
 
-And the last is always the animation name, in this case <code>idle</code>.
-
-## Blockbench is Tricking You
-
-If you're looking at your animation in Blockbench and there's two names, the smaller name in gray is the actual animation name.
-
-<img src={require("@site/static/img/animation/exampleLie.png").default} width="400"></img>
-
-**You can't use the method above to play the animation if it looks like this image**
-
-You have two options: Rename the animation, or deal with the long animation name
-
-### Option One:
-
-Rename the animation
-<img src={require("@site/static/img/animation/exampleIdle.png").default} width="400"></img>
-
-### Option Two:
-
-Deal with the animation name by changing the code.
-
-```lua
-animations.example["animation.model.idle"]:play()
-```
+The final part of the index is the animation name, in this case <code>idle</code>.
 
 ## Alternatives to play()
 
@@ -59,7 +36,7 @@ This is often used for toggles in the action wheel.
 
 ### setPlaying Example
 
-By nature, setPlaying needs to be in a function that will run multiple times, we're going to use a tick event but you could use a ping or anything else
+By nature, setPlaying needs to be in a function that will run multiple times. We will use a tick event, but it functions in any scenario.
 
 ```lua
 function events.tick()
@@ -121,7 +98,7 @@ You'll notice that it's misspelled in this version, fixing it will make the erro
 
 ### Errors inside a keyframe
 
-Errors inside keyframes are vary vastly, but you can indentify them by the name of the animation in the error. Here's three examples:
+Errors inside keyframes are vary vastly, but you can identify them by the name of the animation in the error. Here's three examples:
 <img src={require("@site/static/img/animation/exampleErrorKeyframe.png").default} width="800"></img>
 
 How you fix this will greatly depend on what the error is.
@@ -136,11 +113,11 @@ It only overrides while the animation is playing.
 
 ## Special Keyframe Types
 
-Blockbench animations have a special category of keyframes called Effects keyframes. There are three of them and Figura ignores Particle and Sound
+Blockbench animations have a special category of keyframes called Effects keyframes. There are three of them, but Figura ignores Particle and Sound.
 
 ### Instruction Keyframes
 
-The third special keyframe type is Instruction, Instruction keyframes run lua code when the animation reaches that keyframe. This can be used to play sounds, spawn particles, literally anything. Remember that Lua code is what goes in this spot, not Molang.
+The third special keyframe type is Instruction. Instruction keyframes run Lua code when the animation reaches that keyframe. This can be used to play sounds, spawn particles, literally anything. Remember that Lua code is what goes in this spot, not Molang. The Lua code to play in an instruction keyframe is placed in the Script box in the left sidebar.
 
 Each instruction is its own 'scope' meaning that variables local to any of the scripts can't be accessed by the keyframes without specifically interfacing between them.
 
