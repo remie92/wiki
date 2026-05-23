@@ -5,13 +5,14 @@ Strings are not interpreted as code and are treated as literally being character
 ## String Creation
 
 Strings are most often created with quotation marks ("):
+
 ```lua
 "hello" -- this is a string, as identified by the quotes bracketing it
 hello -- not a string
 ```
 
 But what if you need to include a quotation mark in the string itself? You have two options.
-The first option is to use a backslash to "cancel" the quotation mark. Putting a backslash before a special character will 
+The first option is to use a backslash to "cancel" the quotation mark. Putting a backslash before a special character will
 instead interpret that character in its context (in this case, inside a string) instead of its typical code usage (which would end the string).
 
 ```lua
@@ -24,19 +25,21 @@ using a bounding character that is not itself a quotation mark. Lua actually has
 ```lua
 'Figura is an "awesome" mod!'
 ```
+
 This is especially useful in circumstances where you need to write a [JSON string](../../globals/Nameplate#using-json), which uses quotation marks.
 
 The final character that makes a string is <code>\[\[</code>. This operator, while more verbose, is useful when you either have a ton of characters like quotation marks and apostrophes that you don't want to prematurely end the string, or when you need a multi-line string. To better accomplish its former purpose of not being terminated early, you can also <code>=</code> signs between the brackets to further distinguish the string.
 
 ```lua
-    local string1 = [['Wow'! It's a "string" with square brackets around it. Extraordinary.]]
-    local string2 = [[
+local string1 = [['Wow'! It's a "string" with square brackets around it. Extraordinary.]]
+local string2 =
+    [[
         Wow!
         This string has multiple lines
         and would be displayed as such across multiple lines.
         No other string operator supports this behavior without special characters.
     ]]
-    local string3 = [=====[This, too, is valid, as long as you use the same number of = symbols.]=====]
+local string3 = [=====[This, too, is valid, as long as you use the same number of = symbols.]=====]
 ```
 
 ## String Manipulation
@@ -46,25 +49,27 @@ The most common method of manipulating string is concatenation, which is the com
 ```lua
 local a = 81
 local b = 235
-print("The equation " .. a .. " + " .. b .. " is equal to " .. a+b)
+print("The equation " .. a .. " + " .. b .. " is equal to " .. a + b)
 ```
+
 Other types—in this case, numbers—are automatically "coerced" into strings.
 
 Lua's <code>string</code> library also comes with a variety of useful function for the manipulation of strings. A few of the most useful follow.
+
 - <code>string.sub(str, pos1, pos2)</code> returns a substring between the given bounds (inclusive)
-  - <code>("ASDFGHIJKL"):sub(2, 4)</code> → <code>SDF</code>
+    - <code>("ASDFGHIJKL"):sub(2, 4)</code> → <code>SDF</code>
 - <code>string.lower(str)</code> returns a lowercase version of the string
 - <code>string.upper(str)</code> returns an uppercase version of the string
 - <code>string.len(str)</code> returns the length of the string, equivalent to <code>#str</code>
 - <code>string.find(str, pattern)</code> returns either nil or the starting index, ending index, and capture if it is successful
-  - A third argument (number) may be passed for the beginning index to search
-  - A fourth argument (boolean) may be passed to disable special pattern characters in the pattern
+    - A third argument (number) may be passed for the beginning index to search
+    - A fourth argument (boolean) may be passed to disable special pattern characters in the pattern
 - <code>string.gsub(str, pattern, repl)</code> returns a copy of the string with all instances of <code>pattern</code> replaced by <code>repl</code>
 - <code>string.match(str, pattern)</code> looks for the first match of pattern in the nil, returning the match/capture if successful or nil if unsuccessful
-  - <code>string.gmatch</code> returns an iterator of all matches if you want to capture multiple
+    - <code>string.gmatch</code> returns an iterator of all matches if you want to capture multiple
 - <code>string.format(str, ...)</code> replaces all "directives" with their corresponding arguments.
-  - Directives are formed with % and a letter: <code>d</code> for decimal, <code>f</code> for floating-point number, and <code>s</code> for string.
-  - <code>string.format("%02d/%02d/%04d", 5, 11, 1990)</code> → 05/11/1990
-  - Note that combinations of numbers function to tell the string how many digits and how much padding are desired
+    - Directives are formed with % and a letter: <code>d</code> for decimal, <code>f</code> for floating-point number, and <code>s</code> for string.
+    - <code>string.format("%02d/%02d/%04d", 5, 11, 1990)</code> → 05/11/1990
+    - Note that combinations of numbers function to tell the string how many digits and how much padding are desired
 
 You may have observed use of the term "pattern" in these. While these patterns can simply be plain strings, Lua also has a versatile pattern-matching system similar to regex. To learn more about this, see [PIL](https://www.lua.org/pil/20.2.html).

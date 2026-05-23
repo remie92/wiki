@@ -22,7 +22,7 @@ animations.example.idle:play()
 
 <code>animations</code> stores all the animation data for every Blockbench model.<br/>
 
-The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is <code>example.bbmodel</code>. Note that the <code>.bbmodel</code> file extension is *not* included. If your model is within one or multiple subfolders, those are also included in this section, e.g.: <code>animations["subfolder.example"].idle</code>.
+The next part of the index is always the Blockbench model name that contains the animation you want to play, in our case this is <code>example.bbmodel</code>. Note that the <code>.bbmodel</code> file extension is _not_ included. If your model is within one or multiple subfolders, those are also included in this section, e.g.: <code>animations["subfolder.example"].idle</code>.
 
 The final part of the index is the animation name, in this case <code>idle</code>.
 
