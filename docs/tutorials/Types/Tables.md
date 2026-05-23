@@ -123,7 +123,7 @@ All of these functions are available via the <code>tables</code> global.
 ### <code>table.insert(t, pos, value)</code>
 
 This function can add a value at any index, shifting the other values to account for the added value.<br/>
-<code>table.insert(array, 1, "e")</code> will insert <code>"e"</code> at the beginning of the table <code>array</code>, shifting every other value forward one index.<br>
+<code>table.insert(array, 1, "e")</code> will insert <code>"e"</code> at the beginning of the table <code>array</code>, shifting every other value forward one index.<br/>
 When adding elements to the end of the array, you use the function as <code>table.insert(t, value)</code>. So <code>table.insert(array, "l")</code> appends <code>"l"</code> to the end of the table <code>array</code>.
 
 ### <code>table.remove(t, pos)</code>
