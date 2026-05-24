@@ -28,18 +28,18 @@ using a bounding character that is not itself a quotation mark. Lua actually has
 
 This is especially useful in circumstances where you need to write a [JSON string](../../globals/Nameplate#using-json), which uses quotation marks.
 
-The final character that makes a string is <code>\[\[</code>. This operator, while more verbose, is useful when you either have a ton of characters like quotation marks and apostrophes that you don't want to prematurely end the string, or when you need a multi-line string. To better accomplish its former purpose of not being terminated early, you can also <code>=</code> signs between the brackets to further distinguish the string.
+The final character that makes a string is <code>\[\[</code>. This operator, while more verbose, is useful when you either have a ton of characters like quotation marks and apostrophes that you don't want to prematurely end the string, or when you need a multi-line string. For its former purpose of not being terminated early, <code>=</code> signs can go between the brackets to further distinguish the string. Because of these special properties, backslashes do not escape other characters in these strings.
 
 ```lua
 local string1 = [['Wow'! It's a "string" with square brackets around it. Extraordinary.]]
 local string2 =
     [[
-        Wow!
         This string has multiple lines
         and would be displayed as such across multiple lines.
         No other string operator supports this behavior without special characters.
     ]]
 local string3 = [=====[This, too, is valid, as long as you use the same number of = symbols.]=====]
+local string4 = [[These \'backslashes\' are also in the string, and don't change anything!]]
 ```
 
 ## String Manipulation
@@ -52,9 +52,9 @@ local b = 235
 print("The equation " .. a .. " + " .. b .. " is equal to " .. a + b)
 ```
 
-Other types—in this case, numbers—are automatically "coerced" into strings.
+Strings can only be concatenated with other strings and numbers. Other types will error when concatenated with a string.
 
-Lua's <code>string</code> library also comes with a variety of useful function for the manipulation of strings. A few of the most useful follow.
+Lua's <code>string</code> library also comes with a variety of useful function for the manipulation of strings. These functions can be called by directly invoking <code>string.func(args)</code>, but if you call a function on a string with <code>:</code> or <code>.</code> it will use a corresponding string library function (if it exists)—just make sure to wrap string literals in parentheses for this behavior. Some of the most useful functions follow.
 
 -   <code>string.sub(str, pos1, pos2)</code> returns a substring between the given bounds (inclusive)
     -   <code>("ASDFGHIJKL"):sub(2, 4)</code> → <code>SDF</code>

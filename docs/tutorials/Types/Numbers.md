@@ -24,4 +24,4 @@ end
 ```
 
 Lua also comes with a <code>math</code> library which contains many helpful functions for manipulating numbers (plus a few added by figura).
-It's important to note that all trigonometric functions intake and output radians, whereas many figura functions output degrees.
+It's important to note that all trigonometric functions intake and output radians, whereas many Figura functions work in degrees.
