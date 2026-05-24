@@ -38,7 +38,7 @@ Where <code>modelPart</code> is a reference to a real modelPart in your avatar.
 
 ## An Alternative Method
 
-You can store a reference to a specific particle, and then use it later to change its properties wile it still exists in the world.
+You can store a reference to a specific particle, and then use it later to change its properties while it still exists in the world.
 
 ```lua
 local boom = particles["explosion"]

@@ -11,7 +11,7 @@ If you haven't read and understood the beginner action wheel tutorial, start [th
 
 Creating a network of Pages can be overwhelming. Lets try to rectify that.
 
-This method for creating a Page Network divides the Pages into seperate, isolated files. These files return an Action that can be added to a different page. This Action will set the cuurrent page to the page in the file, but it first stores a reference to the Page it came from. That way when you want to go back to the previous page, its as simple as setting the current page to the stored Page.
+This method for creating a Page Network divides the Pages into separate, isolated files. These files return an Action that can be added to a different page. This Action will set the current page to the page in the file, but it first stores a reference to the Page it came from. That way when you want to go back to the previous page, its as simple as setting the current page to the stored Page.
 
 This allows Pages to be modular and easily reorganized if needed. More importantly, it can help make multiple pages less overwhelming.
 
@@ -62,7 +62,7 @@ return action_wheel:newAction()
 <!-- prettier-ignore -->
 ```lua
 --Page2.lua
--- Page2 is just to show that the entire process can be repeated verbatum, so long as the variables are local.
+-- Page2 is just to show that the entire process can be repeated verbatim, so long as the variables are local.
 local page = action_wheel:newPage()
 page:newAction():title():color():onLeftClick()
 page:newAction():title():color():onLeftClick()
@@ -92,9 +92,9 @@ This example will correctly set the default visibility of a theoretical jetpack 
 
 <!-- prettier-ignore -->
 ```lua
--- This variable's initial value will control the default state of the togglable thing.
+-- This variable's initial value will control the default state of the toggleable thing.
 local jetpackEnabled = true
-local jetpackModel = models.model.Body.Jetpack -- reference a ModelPart for convinience
+local jetpackModel = models.model.Body.Jetpack -- reference a ModelPart for convenience
 local function setJetpack(bool)
     jetpackEnabled = bool -- this will be a ping function, so we still need to set the client's variable for when it is used in the toggle.
     jetpackModel:setVisible(bool)

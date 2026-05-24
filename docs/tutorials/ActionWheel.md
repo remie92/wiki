@@ -27,7 +27,7 @@ This creates a new page, but thats it. If you save and try to open the Action Wh
 action_wheel:setPage(mainPage)
 ```
 
-Tada. New blank page and Figura isnt screaming at us. Now for some actions.<br/>
+Tada. New blank page and Figura isn't screaming at us. Now for some actions.<br/>
 You can call the <code>newAction</code> function on a Page object. This will create a new Action _and_ add it to the Page.
 
 You technically do not need to store the Action in a variable. If you do, please give it a unique variable name. Using the same variable name for all actions can cause issues when doing more advanced stuff.
@@ -143,7 +143,7 @@ local action = mainPage:newAction()
 
 ### Toggle Example
 
-This is an exmaple of the onToggle function, which swaps between two states. It does not work on its own as it doesn't have a page.
+This is an example of the onToggle function, which swaps between two states. It does not work on its own as it doesn't have a page.
 
 <!-- prettier-ignore -->
 ```lua

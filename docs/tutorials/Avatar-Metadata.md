@@ -169,7 +169,7 @@ Consider the following avatar:<br/>
 </FileTreeRoot>
 
 If we want the animation <code>"idle"</code> in the bbmodel <Emoji icon="file/bbmodel"/> <code>player.bbmodel</code>, we would include the string <code>"player.idle"</code> in the <code>"autoAnims"</code> array.<br/>
-Folder seperation is done with a period (<code>.</code>) instead of slash (<code>/</code>).<br/>
+Folder separation is done with a period (<code>.</code>) instead of slash (<code>/</code>).<br/>
 If we want the animation <code>"spin"</code> in the model <Emoji icon="file/bbmodel"/> <code>halo.bbmodel</code>, we would include the string <code>"accessories.halo.spin"</code> in the <code>"autoAnims"</code> array.<br/>
 This is not table indexing like how you would index the `animations` table to get an Animation. It is just string concatenation.<br/>
 <code>autoAnims</code> has a very niche use case as 99% of the time you have animations that you only want playing sometimes or want to play on a trigger. The only real use case is for a constantly playing looping animation that you don't want to waste ~8 instructions on play at the beginning of a script, or perhaps you have an avatar that does not have any script files and you want to keep it that way.
