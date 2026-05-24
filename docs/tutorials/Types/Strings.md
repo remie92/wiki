@@ -56,20 +56,20 @@ Other types—in this case, numbers—are automatically "coerced" into strings.
 
 Lua's <code>string</code> library also comes with a variety of useful function for the manipulation of strings. A few of the most useful follow.
 
-- <code>string.sub(str, pos1, pos2)</code> returns a substring between the given bounds (inclusive)
-    - <code>("ASDFGHIJKL"):sub(2, 4)</code> → <code>SDF</code>
-- <code>string.lower(str)</code> returns a lowercase version of the string
-- <code>string.upper(str)</code> returns an uppercase version of the string
-- <code>string.len(str)</code> returns the length of the string, equivalent to <code>#str</code>
-- <code>string.find(str, pattern)</code> returns either nil or the starting index, ending index, and capture if it is successful
-    - A third argument (number) may be passed for the beginning index to search
-    - A fourth argument (boolean) may be passed to disable special pattern characters in the pattern
-- <code>string.gsub(str, pattern, repl)</code> returns a copy of the string with all instances of <code>pattern</code> replaced by <code>repl</code>
-- <code>string.match(str, pattern)</code> looks for the first match of pattern in the nil, returning the match/capture if successful or nil if unsuccessful
-    - <code>string.gmatch</code> returns an iterator of all matches if you want to capture multiple
-- <code>string.format(str, ...)</code> replaces all "directives" with their corresponding arguments.
-    - Directives are formed with % and a letter: <code>d</code> for decimal, <code>f</code> for floating-point number, and <code>s</code> for string.
-    - <code>string.format("%02d/%02d/%04d", 5, 11, 1990)</code> → 05/11/1990
-    - Note that combinations of numbers function to tell the string how many digits and how much padding are desired
+-   <code>string.sub(str, pos1, pos2)</code> returns a substring between the given bounds (inclusive)
+    -   <code>("ASDFGHIJKL"):sub(2, 4)</code> → <code>SDF</code>
+-   <code>string.lower(str)</code> returns a lowercase version of the string
+-   <code>string.upper(str)</code> returns an uppercase version of the string
+-   <code>string.len(str)</code> returns the length of the string, equivalent to <code>#str</code>
+-   <code>string.find(str, pattern)</code> returns either nil or the starting index, ending index, and capture if it is successful
+    -   A third argument (number) may be passed for the beginning index to search
+    -   A fourth argument (boolean) may be passed to disable special pattern characters in the pattern
+-   <code>string.gsub(str, pattern, repl)</code> returns a copy of the string with all instances of <code>pattern</code> replaced by <code>repl</code>
+-   <code>string.match(str, pattern)</code> looks for the first match of pattern in the nil, returning the match/capture if successful or nil if unsuccessful
+    -   <code>string.gmatch</code> returns an iterator of all matches if you want to capture multiple
+-   <code>string.format(str, ...)</code> replaces all "directives" with their corresponding arguments.
+    -   Directives are formed with % and a letter: <code>d</code> for decimal, <code>f</code> for floating-point number, and <code>s</code> for string.
+    -   <code>string.format("%02d/%02d/%04d", 5, 11, 1990)</code> → 05/11/1990
+    -   Note that combinations of numbers function to tell the string how many digits and how much padding are desired
 
 You may have observed use of the term "pattern" in these. While these patterns can simply be plain strings, Lua also has a versatile pattern-matching system similar to regex. To learn more about this, see [PIL](https://www.lua.org/pil/20.2.html).
