@@ -6,6 +6,7 @@ There can only be one primary and secondary type applied to a cube at once, so y
 
 ```lua
 models.myModel:setPrimaryRenderType("END_PORTAL")
+models.myModel:setSecondaryRenderType("EMISSIVE")
 ```
 
 ---
@@ -14,22 +15,26 @@ models.myModel:setPrimaryRenderType("END_PORTAL")
 
 | Render Type             | Description |
 | ----------------------- | ----------- |
-| `NONE`                  | -           |
-| `CUTOUT`                | -           |
-| `CUTOUT_CULL`           | -           |
-| `TRANSLUCENT`           | -           |
-| `TRANSLUCENT_CULL`      | -           |
-| `EMISSIVE`              | -           |
-| `EMISSIVE_SOLID`        | -           |
-| `CUTOUT_EMISSIVE_SOLID` | -           |
-| `EYES`                  | -           |
-| `END_PORTAL`            | -           |
-| `END_GATEWAY`           | -           |
-| `TEXTURED_PORTAL`       | -           |
+| `NONE`                  | Invisible   |
+| `CUTOUT`                | Standard    |
+| `CUTOUT_CULL`           | Standard (No Inside Faces)           |
+| `TRANSLUCENT`           | Standard           |
+| `TRANSLUCENT_CULL`      | Standard (No Inside Faces)           |
+| `EMISSIVE`              | Fully Lit (Transparent)           |
+| `EMISSIVE_SOLID`        | Fully Lit (No Inside Faces)          |
+| `CUTOUT_EMISSIVE_SOLID` | Fully Lit            |
+| `EYES`                  | Fully Lit (Transparent)           |
+| `END_PORTAL`            | No-perspective End Portal Texture           |
+| `END_GATEWAY`           | No-perspective End Gateway Texture           |
+| `TEXTURED_PORTAL`       | No-perspective Geometric Texture           |
 | `GLINT`                 | -           |
 | `GLINT2`                | -           |
 | `TEXTURED_GLINT`        | -           |
-| `LINES`                 | -           |
-| `LINES_STRIP`           | -           |
-| `SOLID`                 | -           |
-| `BLURRY`                | -           |
+| `LINES`                 | White Lines Around Edges ?          |
+| `LINES_STRIP`           | White Lines Between Vertices ?           |
+| `SOLID`                 | Fully Lit (No Texture, Only White)           |
+| `BLURRY`                | Smoothed texture           |
+
+Visual Flighthrough Example:
+
+https://files.catbox.moe/anp21h.webm
