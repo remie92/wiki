@@ -240,7 +240,7 @@ end
 
 ---
 
-### <code>DAMAGE(type,source,attacker,pos)</code> \{#SKULL_RENDER}
+### <code>DAMAGE(type,source,attacker,pos)</code> \{#DAMAGE}
 
 Takes four arguments:
 
