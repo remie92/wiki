@@ -64,6 +64,7 @@ const config = {
         logo: {
           alt: "Figura Logo",
           src: "img/logo.svg",
+          srcDark: "img/logoDark.svg",
         },
         items: [],
       },
