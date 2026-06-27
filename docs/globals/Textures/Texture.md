@@ -32,7 +32,7 @@ getDimensions()
 **Example:**
 
 ```lua
-myText:getDimensions()
+myTex:getDimensions()
 ```
 
 ---
@@ -54,7 +54,7 @@ getName()
 **Example:**
 
 ```lua
-myText:getName()
+myTex:getName()
 ```
 
 ---
@@ -76,7 +76,7 @@ getPath()
 **Example:**
 
 ```lua
-myText:getPath()
+myTex:getPath()
 ```
 
 ---
@@ -159,7 +159,7 @@ setPixel(x, y, r, g, b, a)
 **Example:**
 
 ```lua
-myText:setPixel(32, 32, 0, 0, 1, 1)
+myTex:setPixel(32, 32, 0, 0, 1, 1)
 ```
 
 ---
@@ -188,7 +188,7 @@ getPixel(x, y)
 **Example:**
 
 ```lua
-myText:getPixel(32, 32)
+myTex:getPixel(32, 32)
 ```
 
 ---
@@ -359,7 +359,7 @@ fill(x, y, width, height, r, g, b, a)
 **Example:**
 
 ```lua
-myText:fill(0, 0, 32, 32, 0, 0, 1, 1)
+myTex:fill(0, 0, 32, 32, 0, 0, 1, 1)
 ```
 
 ---
@@ -381,7 +381,7 @@ restore()
 **Example:**
 
 ```lua
-myText:restore()
+myTex:restore()
 ```
 
 ---
@@ -403,7 +403,7 @@ save()
 **Example:**
 
 ```lua
-myText:save()
+myTex:save()
 ```
 
 ---
@@ -425,7 +425,7 @@ update()
 **Example:**
 
 ```lua
-myText:update()
+myTex:update()
 ```
 
 ---
