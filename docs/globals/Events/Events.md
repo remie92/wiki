@@ -258,7 +258,10 @@ The last three arguments may return nil if there is no direct damage source
 
 ```lua
 function events.damage(type, source, attacker, pos)
-    log("Damaged from " .. type .. " by a " .. attacker)
+    log("Damaged from " .. type .. ")
+    if attacker then
+        log("by a " .. attacker:getType())
+    end
 end
 ```
 
