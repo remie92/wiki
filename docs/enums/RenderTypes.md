@@ -9,7 +9,9 @@ models.myModel:setPrimaryRenderType("END_PORTAL")
 models.myModel:setSecondaryRenderType("EMISSIVE")
 ```
 
+
 The Primary and Secondary render types get combined. You can for example set the Primary to <code>BLURRY</code> and the secondary to <code>GLINT</code> to create a model with blurry textures, while having an animated echantment glint overlayed on top of it.
+
 ---
 
 ## All Render Types
